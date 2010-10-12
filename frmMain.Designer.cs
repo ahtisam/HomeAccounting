@@ -120,6 +120,7 @@
             this.btnSettings.Name = "btnSettings";
             this.btnSettings.Size = new System.Drawing.Size(89, 22);
             this.btnSettings.Text = "Настройки";
+            this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
             // 
             // toolStripSeparator1
             // 
@@ -171,17 +172,16 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = global::HomeAccounting.Properties.Settings.Default.MainFormSize;
+            this.ClientSize = new System.Drawing.Size(640, 480);
             this.Controls.Add(this.pnlHost);
             this.Controls.Add(this.toolStrip1);
             this.DataBindings.Add(new System.Windows.Forms.Binding("Font", global::HomeAccounting.Properties.Settings.Default, "GeneralFont", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.DataBindings.Add(new System.Windows.Forms.Binding("Location", global::HomeAccounting.Properties.Settings.Default, "MainFormLocation", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.DataBindings.Add(new System.Windows.Forms.Binding("ClientSize", global::HomeAccounting.Properties.Settings.Default, "MainFormSize", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.Font = global::HomeAccounting.Properties.Settings.Default.GeneralFont;
-            this.Location = global::HomeAccounting.Properties.Settings.Default.MainFormLocation;
+            this.Location = new System.Drawing.Point(0, 17);
             this.Name = "frmMain";
             this.Text = "Домашняя бухгалтерия";
             this.Shown += new System.EventHandler(this.frmMain_Shown);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmMain_FormClosed);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMain_FormClosing);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();

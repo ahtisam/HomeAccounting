@@ -21,11 +21,12 @@ namespace HomeAccounting
             SQLiteConnectionStringBuilder b = new SQLiteConnectionStringBuilder();
             b.DataSource = Application.StartupPath + @"\accounting.sqlite";
             Settings.Default.AccountingConnectionString = b.ConnectionString;
-            Settings.Default.Save();
+            
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frmMain());
+            Settings.Default.Save();
         }
     }
 }

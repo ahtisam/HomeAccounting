@@ -75,14 +75,14 @@ namespace HomeAccounting.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("0, 17")]
+        [global::System.Configuration.DefaultSettingValueAttribute("0, 0")]
         [global::System.Configuration.SettingsManageabilityAttribute(global::System.Configuration.SettingsManageability.Roaming)]
-        public global::System.Drawing.Point MainFormLocation {
+        public global::System.Drawing.Point FormLocation {
             get {
-                return ((global::System.Drawing.Point)(this["MainFormLocation"]));
+                return ((global::System.Drawing.Point)(this["FormLocation"]));
             }
             set {
-                this["MainFormLocation"] = value;
+                this["FormLocation"] = value;
             }
         }
         
@@ -90,12 +90,12 @@ namespace HomeAccounting.Properties {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("640, 480")]
         [global::System.Configuration.SettingsManageabilityAttribute(global::System.Configuration.SettingsManageability.Roaming)]
-        public global::System.Drawing.Size MainFormSize {
+        public global::System.Drawing.Size FormSize {
             get {
-                return ((global::System.Drawing.Size)(this["MainFormSize"]));
+                return ((global::System.Drawing.Size)(this["FormSize"]));
             }
             set {
-                this["MainFormSize"] = value;
+                this["FormSize"] = value;
             }
         }
     }

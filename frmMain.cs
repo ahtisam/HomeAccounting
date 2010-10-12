@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 
 using HomeAccounting.DataClasses;
+using HomeAccounting.Properties;
 using HomeAccounting.MultilanguageInterface;
 
 namespace HomeAccounting
@@ -72,7 +73,8 @@ namespace HomeAccounting
         public frmMain()
         {
             InitializeComponent();
-            
+            this.DataBindings.Add("Location", Settings.Default, "FormLocation", false, DataSourceUpdateMode.OnPropertyChanged);
+            this.DataBindings.Add("Size", Settings.Default, "FormSize", false, DataSourceUpdateMode.OnPropertyChanged);
         }
 
         private void lblLogin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -129,6 +131,15 @@ namespace HomeAccounting
                 ShowDefaultForm();
             }
 
+        }
+
+        private void frmMain_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            
+        }
+
+        private void btnSettings_Click(object sender, EventArgs e)
+        {
         }
     }
 }

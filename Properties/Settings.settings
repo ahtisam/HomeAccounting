@@ -19,10 +19,10 @@
     <Setting Name="ShowRecordDetails" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
     </Setting>
-    <Setting Name="MainFormLocation" Roaming="true" Type="System.Drawing.Point" Scope="User">
-      <Value Profile="(Default)">0, 17</Value>
+    <Setting Name="FormLocation" Roaming="true" Type="System.Drawing.Point" Scope="User">
+      <Value Profile="(Default)">0, 0</Value>
     </Setting>
-    <Setting Name="MainFormSize" Roaming="true" Type="System.Drawing.Size" Scope="User">
+    <Setting Name="FormSize" Roaming="true" Type="System.Drawing.Size" Scope="User">
       <Value Profile="(Default)">640, 480</Value>
     </Setting>
   </Settings>

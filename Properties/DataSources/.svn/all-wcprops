@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/dotNet/!svn/ver/11/HomeAccounting/Properties/DataSources
+END
+HomeAccounting.DataSources.BookType.datasource
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/dotNet/!svn/ver/14/HomeAccounting/Properties/DataSources/HomeAccounting.DataSources.BookType.datasource
+END
+HomeAccounting.DataSources.BooksListDS.datasource
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/dotNet/!svn/ver/14/HomeAccounting/Properties/DataSources/HomeAccounting.DataSources.BooksListDS.datasource
+END
+HomeAccounting.DataSources.AccountsListDS.datasource
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/dotNet/!svn/ver/11/HomeAccounting/Properties/DataSources/HomeAccounting.DataSources.AccountsListDS.datasource
+END

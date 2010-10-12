@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/dotNet/!svn/ver/11/HomeAccounting/DataSources
+END
+AccountsList.cs
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/dotNet/!svn/ver/12/HomeAccounting/DataSources/AccountsList.cs
+END
+BookType.cs
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/dotNet/!svn/ver/14/HomeAccounting/DataSources/BookType.cs
+END
+BooksList.cs
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/dotNet/!svn/ver/14/HomeAccounting/DataSources/BooksList.cs
+END

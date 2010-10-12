@@ -1,0 +1,32 @@
+﻿<?xml version="1.0"?>
+<configuration>
+    <configSections>
+        <sectionGroup name="userSettings" type="System.Configuration.UserSettingsGroup, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <section name="HomeAccounting.Properties.Settings" type="System.Configuration.ClientSettingsSection, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" allowExeDefinition="MachineToLocalUser" requirePermission="false"/>
+        </sectionGroup>
+    </configSections>
+    <connectionStrings>
+        <add name="HomeAccounting.Properties.Settings.AccountingConnectionString"
+            connectionString="data source=D:\Development\cSharp\HomeAccounting\accounting.sqlite"
+            providerName="System.Data.SQLite" />
+    </connectionStrings>
+    <userSettings>
+        <HomeAccounting.Properties.Settings>
+            <setting name="GeneralFont" serializeAs="String">
+                <value>Tahoma, 8.25pt</value>
+            </setting>
+            <setting name="RecordDetailsWarningShown" serializeAs="String">
+                <value>False</value>
+            </setting>
+            <setting name="ShowRecordDetails" serializeAs="String">
+                <value>True</value>
+            </setting>
+            <setting name="MainFormLocation" serializeAs="String">
+                <value>0, 17</value>
+            </setting>
+            <setting name="MainFormSize" serializeAs="String">
+                <value>640, 480</value>
+            </setting>
+        </HomeAccounting.Properties.Settings>
+    </userSettings>
+<startup><supportedRuntime version="v2.0.50727"/></startup></configuration>

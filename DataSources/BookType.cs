@@ -5,13 +5,13 @@ using System.Text;
 
 namespace HomeAccounting.DataSources
 {
-    public class BookType: Dictionary<char,string>
+    public class BookType: Dictionary<string,string>
     {
         public BookType()
         {
-            this.Add('b', "Приход/расход");
-            this.Add('o', "Только расход");
-            this.Add('i', "Только приход");
+            this.Add("b", "Приход/расход");
+            this.Add("o", "Только расход");
+            this.Add("i", "Только приход");
         }
 
     }

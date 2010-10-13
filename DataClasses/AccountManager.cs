@@ -20,7 +20,7 @@ namespace HomeAccounting.DataClasses
                     cmd.Connection = con;
                     cmd.CommandText = "INSERT INTO main.account VALUES (NULL, @title, CURRENT_DATE, @password)";
 
-                    
+
                     SQLiteParameter pTitle = new SQLiteParameter("title", title);
                     pTitle.Direction = ParameterDirection.Input;
 
@@ -28,9 +28,16 @@ namespace HomeAccounting.DataClasses
                     pPassword.Direction = ParameterDirection.Input;
 
                     cmd.Parameters.AddRange(new SQLiteParameter[] { pTitle, pPassword });
-                    con.Open();
-                    cmd.ExecuteNonQuery();
-                    con.Close();
+                    try
+                    {
+                        con.Open();
+                        cmd.ExecuteNonQuery();
+                        con.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        throw ex;
+                    }
                 }
             }
         }

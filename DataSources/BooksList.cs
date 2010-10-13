@@ -13,7 +13,7 @@ namespace HomeAccounting.DataSources
             this.TableName = "Book";
             this.Columns.Add(new DataColumn("bookId", typeof(int)));
             this.Columns.Add(new DataColumn("account", typeof(int)));
-            this.Columns.Add(new DataColumn("type", typeof(char)));
+            this.Columns.Add(new DataColumn("type", typeof(string)));
             this.Columns.Add(new DataColumn("title", typeof(string)));
             this.Columns.Add(new DataColumn("added", typeof(DateTime)));
         }

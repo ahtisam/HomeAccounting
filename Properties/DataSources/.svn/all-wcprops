@@ -3,6 +3,12 @@ svn:wc:ra_dav:version-url
 V 61
 /svn/dotNet/!svn/ver/11/HomeAccounting/Properties/DataSources
 END
+HomeAccounting.DataSources.CategoriesListDS.datasource
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/dotNet/!svn/ver/21/HomeAccounting/Properties/DataSources/HomeAccounting.DataSources.CategoriesListDS.datasource
+END
 HomeAccounting.DataSources.BookType.datasource
 K 25
 svn:wc:ra_dav:version-url

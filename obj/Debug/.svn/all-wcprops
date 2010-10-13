@@ -19,25 +19,25 @@ HomeAccounting.exe
 K 25
 svn:wc:ra_dav:version-url
 V 67
-/svn/dotNet/!svn/ver/13/HomeAccounting/obj/Debug/HomeAccounting.exe
+/svn/dotNet/!svn/ver/22/HomeAccounting/obj/Debug/HomeAccounting.exe
 END
 HomeAccounting.frmMain.resources
 K 25
 svn:wc:ra_dav:version-url
 V 81
-/svn/dotNet/!svn/ver/13/HomeAccounting/obj/Debug/HomeAccounting.frmMain.resources
+/svn/dotNet/!svn/ver/22/HomeAccounting/obj/Debug/HomeAccounting.frmMain.resources
 END
 HomeAccounting.csproj.GenerateResource.Cache
 K 25
 svn:wc:ra_dav:version-url
 V 93
-/svn/dotNet/!svn/ver/13/HomeAccounting/obj/Debug/HomeAccounting.csproj.GenerateResource.Cache
+/svn/dotNet/!svn/ver/22/HomeAccounting/obj/Debug/HomeAccounting.csproj.GenerateResource.Cache
 END
 HomeAccounting.pdb
 K 25
 svn:wc:ra_dav:version-url
 V 67
-/svn/dotNet/!svn/ver/13/HomeAccounting/obj/Debug/HomeAccounting.pdb
+/svn/dotNet/!svn/ver/22/HomeAccounting/obj/Debug/HomeAccounting.pdb
 END
 HomeAccounting.frmLogin.resources
 K 25
@@ -49,7 +49,7 @@ HomeAccounting.csproj.FileListAbsolute.txt
 K 25
 svn:wc:ra_dav:version-url
 V 91
-/svn/dotNet/!svn/ver/13/HomeAccounting/obj/Debug/HomeAccounting.csproj.FileListAbsolute.txt
+/svn/dotNet/!svn/ver/22/HomeAccounting/obj/Debug/HomeAccounting.csproj.FileListAbsolute.txt
 END
 HomeAccounting.frmAddEditBook.resources
 K 25
@@ -67,5 +67,5 @@ HomeAccounting.ctrlAccount.resources
 K 25
 svn:wc:ra_dav:version-url
 V 85
-/svn/dotNet/!svn/ver/13/HomeAccounting/obj/Debug/HomeAccounting.ctrlAccount.resources
+/svn/dotNet/!svn/ver/22/HomeAccounting/obj/Debug/HomeAccounting.ctrlAccount.resources
 END

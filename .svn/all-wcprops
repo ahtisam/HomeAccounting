@@ -1,0 +1,179 @@
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/svn/dotNet/!svn/ver/11/HomeAccounting
+END
+frmLogin.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/dotNet/!svn/ver/12/HomeAccounting/frmLogin.Designer.cs
+END
+frmLogin.cs
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/dotNet/!svn/ver/12/HomeAccounting/frmLogin.cs
+END
+frmAddEditBook.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/dotNet/!svn/ver/20/HomeAccounting/frmAddEditBook.Designer.cs
+END
+frmCategoryManagement.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/dotNet/!svn/ver/22/HomeAccounting/frmCategoryManagement.Designer.cs
+END
+frmAddEditBook.cs
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/dotNet/!svn/ver/20/HomeAccounting/frmAddEditBook.cs
+END
+frmCategoryManagement.cs
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/dotNet/!svn/ver/22/HomeAccounting/frmCategoryManagement.cs
+END
+frmAddEditAccount.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/dotNet/!svn/ver/13/HomeAccounting/frmAddEditAccount.Designer.cs
+END
+app.config
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/dotNet/!svn/ver/16/HomeAccounting/app.config
+END
+ctrlAccount.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/dotNet/!svn/ver/21/HomeAccounting/ctrlAccount.Designer.cs
+END
+frmAddEditAccount.cs
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/dotNet/!svn/ver/13/HomeAccounting/frmAddEditAccount.cs
+END
+ctrlAccount.cs
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/dotNet/!svn/ver/21/HomeAccounting/ctrlAccount.cs
+END
+accounting.sqlite
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/dotNet/!svn/ver/22/HomeAccounting/accounting.sqlite
+END
+accountingDataSet.xsc
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/dotNet/!svn/ver/13/HomeAccounting/accountingDataSet.xsc
+END
+frmMain.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/dotNet/!svn/ver/15/HomeAccounting/frmMain.Designer.cs
+END
+accountingDataSet.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/dotNet/!svn/ver/21/HomeAccounting/accountingDataSet.xsd
+END
+frmLogin.resx
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/dotNet/!svn/ver/11/HomeAccounting/frmLogin.resx
+END
+frmMain.cs
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/dotNet/!svn/ver/17/HomeAccounting/frmMain.cs
+END
+HomeAccounting.sln
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/dotNet/!svn/ver/10/HomeAccounting/HomeAccounting.sln
+END
+frmAddEditBook.resx
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/dotNet/!svn/ver/20/HomeAccounting/frmAddEditBook.resx
+END
+frmCategoryManagement.resx
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/dotNet/!svn/ver/22/HomeAccounting/frmCategoryManagement.resx
+END
+frmAddEditAccount.resx
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/dotNet/!svn/ver/13/HomeAccounting/frmAddEditAccount.resx
+END
+ctrlAccount.resx
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/dotNet/!svn/ver/21/HomeAccounting/ctrlAccount.resx
+END
+HomeAccounting.csproj
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/dotNet/!svn/ver/21/HomeAccounting/HomeAccounting.csproj
+END
+accountingDataSet.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/dotNet/!svn/ver/13/HomeAccounting/accountingDataSet.Designer.cs
+END
+Settings.cs
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/dotNet/!svn/ver/13/HomeAccounting/Settings.cs
+END
+HomeAccounting.suo
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/dotNet/!svn/ver/22/HomeAccounting/HomeAccounting.suo
+END
+frmMain.resx
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/dotNet/!svn/ver/15/HomeAccounting/frmMain.resx
+END
+Program.cs
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/dotNet/!svn/ver/17/HomeAccounting/Program.cs
+END
+accountingDataSet.xss
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/dotNet/!svn/ver/13/HomeAccounting/accountingDataSet.xss
+END

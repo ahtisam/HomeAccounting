@@ -27,11 +27,17 @@ svn:wc:ra_dav:version-url
 V 79
 /svn/dotNet/!svn/ver/14/HomeAccounting/DataClasses/AccountsListDataSetFiller.cs
 END
+SelectedBook.cs
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/dotNet/!svn/ver/20/HomeAccounting/DataClasses/SelectedBook.cs
+END
 BookManager.cs
 K 25
 svn:wc:ra_dav:version-url
 V 65
-/svn/dotNet/!svn/ver/14/HomeAccounting/DataClasses/BookManager.cs
+/svn/dotNet/!svn/ver/20/HomeAccounting/DataClasses/BookManager.cs
 END
 SelectedAccount.cs
 K 25
@@ -39,9 +45,15 @@ svn:wc:ra_dav:version-url
 V 69
 /svn/dotNet/!svn/ver/14/HomeAccounting/DataClasses/SelectedAccount.cs
 END
+CategoriesListDataSetFiller.cs
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/dotNet/!svn/ver/22/HomeAccounting/DataClasses/CategoriesListDataSetFiller.cs
+END
 AccountManager.cs
 K 25
 svn:wc:ra_dav:version-url
 V 68
-/svn/dotNet/!svn/ver/14/HomeAccounting/DataClasses/AccountManager.cs
+/svn/dotNet/!svn/ver/19/HomeAccounting/DataClasses/AccountManager.cs
 END

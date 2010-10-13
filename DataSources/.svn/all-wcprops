@@ -13,11 +13,17 @@ BookType.cs
 K 25
 svn:wc:ra_dav:version-url
 V 62
-/svn/dotNet/!svn/ver/14/HomeAccounting/DataSources/BookType.cs
+/svn/dotNet/!svn/ver/20/HomeAccounting/DataSources/BookType.cs
+END
+CategoriesList.cs
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/dotNet/!svn/ver/21/HomeAccounting/DataSources/CategoriesList.cs
 END
 BooksList.cs
 K 25
 svn:wc:ra_dav:version-url
 V 63
-/svn/dotNet/!svn/ver/14/HomeAccounting/DataSources/BooksList.cs
+/svn/dotNet/!svn/ver/20/HomeAccounting/DataSources/BooksList.cs
 END

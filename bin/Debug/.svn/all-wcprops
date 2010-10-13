@@ -7,19 +7,19 @@ HomeAccounting.exe
 K 25
 svn:wc:ra_dav:version-url
 V 67
-/svn/dotNet/!svn/ver/13/HomeAccounting/bin/Debug/HomeAccounting.exe
+/svn/dotNet/!svn/ver/22/HomeAccounting/bin/Debug/HomeAccounting.exe
 END
 HomeAccounting.exe.config
 K 25
 svn:wc:ra_dav:version-url
 V 74
-/svn/dotNet/!svn/ver/13/HomeAccounting/bin/Debug/HomeAccounting.exe.config
+/svn/dotNet/!svn/ver/22/HomeAccounting/bin/Debug/HomeAccounting.exe.config
 END
 HomeAccounting.pdb
 K 25
 svn:wc:ra_dav:version-url
 V 67
-/svn/dotNet/!svn/ver/13/HomeAccounting/bin/Debug/HomeAccounting.pdb
+/svn/dotNet/!svn/ver/22/HomeAccounting/bin/Debug/HomeAccounting.pdb
 END
 HomeAccounting.vshost.exe
 K 25
@@ -31,11 +31,11 @@ accounting.sqlite
 K 25
 svn:wc:ra_dav:version-url
 V 66
-/svn/dotNet/!svn/ver/13/HomeAccounting/bin/Debug/accounting.sqlite
+/svn/dotNet/!svn/ver/22/HomeAccounting/bin/Debug/accounting.sqlite
 END
 HomeAccounting.vshost.exe.config
 K 25
 svn:wc:ra_dav:version-url
 V 81
-/svn/dotNet/!svn/ver/13/HomeAccounting/bin/Debug/HomeAccounting.vshost.exe.config
+/svn/dotNet/!svn/ver/22/HomeAccounting/bin/Debug/HomeAccounting.vshost.exe.config
 END

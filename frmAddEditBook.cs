@@ -20,7 +20,7 @@ namespace HomeAccounting
         private BookType bType;
         private bool _isEditing;
 
-        public frmAddEditBook(BookFormCreatingReason reason)
+        public frmAddEditBook(FormCreatingReason reason)
         {
             InitializeComponent();
             try
@@ -30,11 +30,11 @@ namespace HomeAccounting
 
                 switch (reason)
                 {
-                    case BookFormCreatingReason.NewBook:
+                    case FormCreatingReason.NewItem:
                         Text = "Новая книга учета";
                         _isEditing = false;
                         break;
-                    case BookFormCreatingReason.EditBook:
+                    case FormCreatingReason.EditItem:
                         tbTitle.Text = SelectedBook.Instance.Title;
                         cbBookType.SelectedValue = SelectedBook.Instance.Type;
                         Text = "Редактировать книгу учета";
@@ -88,9 +88,5 @@ namespace HomeAccounting
         }
     }
 
-    public enum BookFormCreatingReason
-    {
-        NewBook,
-        EditBook
-    }
+    
 }

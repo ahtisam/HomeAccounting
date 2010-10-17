@@ -21,18 +21,18 @@ namespace HomeAccounting
                 && (tbPassword.Text != string.Empty);
             
         }
-        public frmAddEditAccount(AccountFormCreatingReason reason)
+        public frmAddEditAccount(FormCreatingReason reason)
         {
             InitializeComponent();
             switch (reason)
             {
-                case AccountFormCreatingReason.EditAccount:
+                case FormCreatingReason.EditItem:
                     _isEditing = true;
                     tbTitle.Text = SelectedAccount.Instance.Title;
                     tbPassword.Text = SelectedAccount.Instance.Password;
                     tbPasswordAgain.Text = string.Empty;
                     break;
-                case AccountFormCreatingReason.NewAccount:
+                case FormCreatingReason.NewItem:
                     _isEditing = false;
                     break;
             }
@@ -77,11 +77,5 @@ namespace HomeAccounting
         {
             btnSave.Enabled = CheckDetails();
         }
-    }
-
-    public enum AccountFormCreatingReason
-    {
-        NewAccount,
-        EditAccount
     }
 }

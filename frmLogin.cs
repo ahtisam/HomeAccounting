@@ -65,7 +65,7 @@ namespace HomeAccounting
 
         private void lblAddNewAccount_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            frmAddEditAccount frm = new frmAddEditAccount(AccountFormCreatingReason.NewAccount);
+            frmAddEditAccount frm = new frmAddEditAccount(FormCreatingReason.NewItem);
             if (frm.ShowDialog() == DialogResult.OK)
             {
                 GetAccountsList();

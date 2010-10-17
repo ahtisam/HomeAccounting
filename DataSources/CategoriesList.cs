@@ -19,6 +19,9 @@ namespace HomeAccounting.DataSources
             this.Columns.Add(new DataColumn("expense", typeof(decimal)));
             this.Columns.Add(new DataColumn("total", typeof(decimal)));
 
+            this.Columns["rowId"].AutoIncrement = true;
+            this.Columns["rowId"].AutoIncrementSeed = 1;
+            this.Columns["rowId"].AutoIncrementStep = 1;
             this.Columns["total"].Expression = "income - expense";
         }
     }

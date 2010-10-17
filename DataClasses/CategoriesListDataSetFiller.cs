@@ -16,9 +16,8 @@ namespace HomeAccounting.DataClasses
         public static CategoriesListDS FillData(int account)
         {
             CategoriesListDS _dsSource = new CategoriesListDS();
-
+            BookType bType = new BookType();
             
-            int rowId = 1;
             using (SQLiteConnection con = new SQLiteConnection(Settings.Default.AccountingConnectionString))
             {
                 using (SQLiteCommand cmd = new SQLiteCommand())
@@ -38,10 +37,13 @@ namespace HomeAccounting.DataClasses
                         {
                             decimal income = rdr.GetValue(3).GetType() == typeof(DBNull)?0:rdr.GetDecimal(3);
                             decimal expense = rdr.GetValue(4).GetType() == typeof(DBNull) ? 0 : rdr.GetDecimal(4);
+                            string type = "";
+                            bType.TryGetValue(rdr.GetString(1),out type);
+
                             _dsSource.Tables["Category"].Rows.Add(new object[] {
-                                rowId++,
+                                null,
                                 rdr.GetInt32(0),
-                                rdr.GetString(1),
+                                type,
                                 rdr.GetString(2),
                                 income,
                                 expense

@@ -25,5 +25,11 @@
     <Setting Name="FormSize" Roaming="true" Type="System.Drawing.Size" Scope="User">
       <Value Profile="(Default)">640, 480</Value>
     </Setting>
+    <Setting Name="PositiveTotalRowColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">192, 255, 192</Value>
+    </Setting>
+    <Setting Name="NegativeTotalRowColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">255, 192, 192</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

@@ -19,7 +19,7 @@ namespace HomeAccounting
         private BooksListDS dsBooks;
 
 
-        private void ShowBookForm(BookFormCreatingReason reason)
+        private void ShowBookForm(FormCreatingReason reason)
         {
             frmAddEditBook f = new frmAddEditBook(reason);
             if (f.ShowDialog() == DialogResult.OK)
@@ -78,7 +78,7 @@ namespace HomeAccounting
 
         private void btnAddBook_Click(object sender, EventArgs e)
         {
-            ShowBookForm(BookFormCreatingReason.NewBook);
+            ShowBookForm(FormCreatingReason.NewItem);
         }
 
         private void bookBindingSource_CurrentChanged(object sender, EventArgs e)
@@ -95,7 +95,7 @@ namespace HomeAccounting
 
         private void btnEditBook_Click(object sender, EventArgs e)
         {
-            ShowBookForm(BookFormCreatingReason.EditBook);
+            ShowBookForm(FormCreatingReason.EditItem);
         }
 
         private void btnDeleteBook_Click(object sender, EventArgs e)

@@ -57,6 +57,12 @@ svn:wc:ra_dav:version-url
 V 81
 /svn/dotNet/!svn/ver/23/HomeAccounting/DataClasses/CategoriesListDataSetFiller.cs
 END
+RecordsDataSetFiller.cs
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/dotNet/!svn/ver/26/HomeAccounting/DataClasses/RecordsDataSetFiller.cs
+END
 AccountManager.cs
 K 25
 svn:wc:ra_dav:version-url

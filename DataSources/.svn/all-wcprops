@@ -21,6 +21,12 @@ svn:wc:ra_dav:version-url
 V 68
 /svn/dotNet/!svn/ver/23/HomeAccounting/DataSources/CategoriesList.cs
 END
+Records.cs
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/dotNet/!svn/ver/26/HomeAccounting/DataSources/Records.cs
+END
 BooksList.cs
 K 25
 svn:wc:ra_dav:version-url

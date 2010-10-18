@@ -87,14 +87,14 @@ namespace HomeAccounting
 
         private void bookBindingSource_CurrentChanged(object sender, EventArgs e)
         {
-            if (bookBindingSource.Current != null)
-            {
-                SelectedBook.Instance.BookId = (int)(bookBindingSource.Current as DataRowView).Row.ItemArray[0];
-                SelectedBook.Instance.Account = (int)(bookBindingSource.Current as DataRowView).Row.ItemArray[1];
-                SelectedBook.Instance.Type = (bookBindingSource.Current as DataRowView).Row.ItemArray[2].ToString();
-                SelectedBook.Instance.Title = (bookBindingSource.Current as DataRowView).Row.ItemArray[3].ToString();
-                SelectedBook.Instance.Added = (DateTime)(bookBindingSource.Current as DataRowView).Row.ItemArray[4];
-            }
+            tlpRecords.Enabled = bookBindingSource.Current != null;
+            btnEditBook.Enabled = bookBindingSource.Current != null;
+            btnDeleteBook.Enabled = bookBindingSource.Current != null;
+            SelectedBook.Instance.BookId = bookBindingSource.Current != null ? (int)dsBooks.Tables["Book"].Rows[bookBindingSource.Position]["bookId"] : 0;
+            SelectedBook.Instance.Account = bookBindingSource.Current != null ? (int)dsBooks.Tables["Book"].Rows[bookBindingSource.Position]["account"] : 0;
+            SelectedBook.Instance.Type = bookBindingSource.Current != null ? dsBooks.Tables["Book"].Rows[bookBindingSource.Position]["type"].ToString() : string.Empty;
+            SelectedBook.Instance.Title = bookBindingSource.Current != null ? dsBooks.Tables["Book"].Rows[bookBindingSource.Position]["title"].ToString() : string.Empty;
+            SelectedBook.Instance.Added = bookBindingSource.Current != null ? (DateTime)dsBooks.Tables["Book"].Rows[bookBindingSource.Position]["added"] : DateTime.MinValue;
         }
 
         private void btnEditBook_Click(object sender, EventArgs e)

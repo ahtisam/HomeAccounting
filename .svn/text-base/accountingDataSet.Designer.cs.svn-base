@@ -29,6 +29,8 @@ namespace HomeAccounting {
         
         private bookDataTable tablebook;
         
+        private recordsDataTable tablerecords;
+        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -60,6 +62,9 @@ namespace HomeAccounting {
                 }
                 if ((ds.Tables["book"] != null)) {
                     base.Tables.Add(new bookDataTable(ds.Tables["book"]));
+                }
+                if ((ds.Tables["records"] != null)) {
+                    base.Tables.Add(new recordsDataTable(ds.Tables["records"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -94,6 +99,15 @@ namespace HomeAccounting {
         public bookDataTable book {
             get {
                 return this.tablebook;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public recordsDataTable records {
+            get {
+                return this.tablerecords;
             }
         }
         
@@ -162,6 +176,9 @@ namespace HomeAccounting {
                 if ((ds.Tables["book"] != null)) {
                     base.Tables.Add(new bookDataTable(ds.Tables["book"]));
                 }
+                if ((ds.Tables["records"] != null)) {
+                    base.Tables.Add(new recordsDataTable(ds.Tables["records"]));
+                }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
                 this.Namespace = ds.Namespace;
@@ -204,6 +221,12 @@ namespace HomeAccounting {
                     this.tablebook.InitVars();
                 }
             }
+            this.tablerecords = ((recordsDataTable)(base.Tables["records"]));
+            if ((initTable == true)) {
+                if ((this.tablerecords != null)) {
+                    this.tablerecords.InitVars();
+                }
+            }
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -217,6 +240,8 @@ namespace HomeAccounting {
             base.Tables.Add(this.tablevAccounts);
             this.tablebook = new bookDataTable();
             base.Tables.Add(this.tablebook);
+            this.tablerecords = new recordsDataTable();
+            base.Tables.Add(this.tablerecords);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -226,6 +251,11 @@ namespace HomeAccounting {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         private bool ShouldSerializebook() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private bool ShouldSerializerecords() {
             return false;
         }
         
@@ -285,6 +315,8 @@ namespace HomeAccounting {
         public delegate void vAccountsRowChangeEventHandler(object sender, vAccountsRowChangeEvent e);
         
         public delegate void bookRowChangeEventHandler(object sender, bookRowChangeEvent e);
+        
+        public delegate void recordsRowChangeEventHandler(object sender, recordsRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -836,6 +868,341 @@ namespace HomeAccounting {
         }
         
         /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "2.0.0.0")]
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class recordsDataTable : global::System.Data.TypedTableBase<recordsRow> {
+            
+            private global::System.Data.DataColumn columnrecordId;
+            
+            private global::System.Data.DataColumn columncategory;
+            
+            private global::System.Data.DataColumn columnbook;
+            
+            private global::System.Data.DataColumn columnincome;
+            
+            private global::System.Data.DataColumn columnthesum;
+            
+            private global::System.Data.DataColumn columnadded;
+            
+            private global::System.Data.DataColumn columncomment;
+            
+            private global::System.Data.DataColumn columntitle;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public recordsDataTable() {
+                this.TableName = "records";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal recordsDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected recordsDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn recordIdColumn {
+                get {
+                    return this.columnrecordId;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn categoryColumn {
+                get {
+                    return this.columncategory;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn bookColumn {
+                get {
+                    return this.columnbook;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn incomeColumn {
+                get {
+                    return this.columnincome;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn thesumColumn {
+                get {
+                    return this.columnthesum;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn addedColumn {
+                get {
+                    return this.columnadded;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn commentColumn {
+                get {
+                    return this.columncomment;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn titleColumn {
+                get {
+                    return this.columntitle;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public recordsRow this[int index] {
+                get {
+                    return ((recordsRow)(this.Rows[index]));
+                }
+            }
+            
+            public event recordsRowChangeEventHandler recordsRowChanging;
+            
+            public event recordsRowChangeEventHandler recordsRowChanged;
+            
+            public event recordsRowChangeEventHandler recordsRowDeleting;
+            
+            public event recordsRowChangeEventHandler recordsRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void AddrecordsRow(recordsRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public recordsRow AddrecordsRow(long category, long book, bool income, decimal thesum, System.DateTime added, string comment, string title) {
+                recordsRow rowrecordsRow = ((recordsRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        null,
+                        category,
+                        book,
+                        income,
+                        thesum,
+                        added,
+                        comment,
+                        title};
+                rowrecordsRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowrecordsRow);
+                return rowrecordsRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public recordsRow FindByrecordId(long recordId) {
+                return ((recordsRow)(this.Rows.Find(new object[] {
+                            recordId})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public override global::System.Data.DataTable Clone() {
+                recordsDataTable cln = ((recordsDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new recordsDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal void InitVars() {
+                this.columnrecordId = base.Columns["recordId"];
+                this.columncategory = base.Columns["category"];
+                this.columnbook = base.Columns["book"];
+                this.columnincome = base.Columns["income"];
+                this.columnthesum = base.Columns["thesum"];
+                this.columnadded = base.Columns["added"];
+                this.columncomment = base.Columns["comment"];
+                this.columntitle = base.Columns["title"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            private void InitClass() {
+                this.columnrecordId = new global::System.Data.DataColumn("recordId", typeof(long), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnrecordId);
+                this.columncategory = new global::System.Data.DataColumn("category", typeof(long), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncategory);
+                this.columnbook = new global::System.Data.DataColumn("book", typeof(long), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnbook);
+                this.columnincome = new global::System.Data.DataColumn("income", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnincome);
+                this.columnthesum = new global::System.Data.DataColumn("thesum", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnthesum);
+                this.columnadded = new global::System.Data.DataColumn("added", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnadded);
+                this.columncomment = new global::System.Data.DataColumn("comment", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncomment);
+                this.columntitle = new global::System.Data.DataColumn("title", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columntitle);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnrecordId}, true));
+                this.columnrecordId.AutoIncrement = true;
+                this.columnrecordId.AutoIncrementSeed = -1;
+                this.columnrecordId.AutoIncrementStep = -1;
+                this.columnrecordId.AllowDBNull = false;
+                this.columnrecordId.Unique = true;
+                this.columncategory.AllowDBNull = false;
+                this.columnbook.AllowDBNull = false;
+                this.columnincome.AllowDBNull = false;
+                this.columnthesum.AllowDBNull = false;
+                this.columnadded.AllowDBNull = false;
+                this.columncomment.MaxLength = 2147483647;
+                this.columntitle.AllowDBNull = false;
+                this.columntitle.MaxLength = 2147483647;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public recordsRow NewrecordsRow() {
+                return ((recordsRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new recordsRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override global::System.Type GetRowType() {
+                return typeof(recordsRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.recordsRowChanged != null)) {
+                    this.recordsRowChanged(this, new recordsRowChangeEvent(((recordsRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.recordsRowChanging != null)) {
+                    this.recordsRowChanging(this, new recordsRowChangeEvent(((recordsRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.recordsRowDeleted != null)) {
+                    this.recordsRowDeleted(this, new recordsRowChangeEvent(((recordsRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.recordsRowDeleting != null)) {
+                    this.recordsRowDeleting(this, new recordsRowChangeEvent(((recordsRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void RemoverecordsRow(recordsRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                accountingDataSet ds = new accountingDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "recordsDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "2.0.0.0")]
@@ -936,6 +1303,116 @@ namespace HomeAccounting {
         }
         
         /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "2.0.0.0")]
+        public partial class recordsRow : global::System.Data.DataRow {
+            
+            private recordsDataTable tablerecords;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal recordsRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tablerecords = ((recordsDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public long recordId {
+                get {
+                    return ((long)(this[this.tablerecords.recordIdColumn]));
+                }
+                set {
+                    this[this.tablerecords.recordIdColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public long category {
+                get {
+                    return ((long)(this[this.tablerecords.categoryColumn]));
+                }
+                set {
+                    this[this.tablerecords.categoryColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public long book {
+                get {
+                    return ((long)(this[this.tablerecords.bookColumn]));
+                }
+                set {
+                    this[this.tablerecords.bookColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool income {
+                get {
+                    return ((bool)(this[this.tablerecords.incomeColumn]));
+                }
+                set {
+                    this[this.tablerecords.incomeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public decimal thesum {
+                get {
+                    return ((decimal)(this[this.tablerecords.thesumColumn]));
+                }
+                set {
+                    this[this.tablerecords.thesumColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public System.DateTime added {
+                get {
+                    return ((global::System.DateTime)(this[this.tablerecords.addedColumn]));
+                }
+                set {
+                    this[this.tablerecords.addedColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string comment {
+                get {
+                    try {
+                        return ((string)(this[this.tablerecords.commentColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'comment\' in table \'records\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablerecords.commentColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string title {
+                get {
+                    return ((string)(this[this.tablerecords.titleColumn]));
+                }
+                set {
+                    this[this.tablerecords.titleColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IscommentNull() {
+                return this.IsNull(this.tablerecords.commentColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetcommentNull() {
+                this[this.tablerecords.commentColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "2.0.0.0")]
@@ -984,6 +1461,37 @@ namespace HomeAccounting {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             public bookRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "2.0.0.0")]
+        public class recordsRowChangeEvent : global::System.EventArgs {
+            
+            private recordsRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public recordsRowChangeEvent(recordsRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public recordsRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -1325,6 +1833,182 @@ namespace HomeAccounting.accountingDataSetTableAdapters {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             this.Adapter.SelectCommand.Parameters[0].Value = ((long)(account));
             accountingDataSet.bookDataTable dataTable = new accountingDataSet.bookDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "2.0.0.0")]
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class recordsTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SQLite.SQLiteDataAdapter _adapter;
+        
+        private global::System.Data.SQLite.SQLiteConnection _connection;
+        
+        private global::System.Data.SQLite.SQLiteTransaction _transaction;
+        
+        private global::System.Data.SQLite.SQLiteCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public recordsTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        protected internal global::System.Data.SQLite.SQLiteDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        internal global::System.Data.SQLite.SQLiteConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SQLite.SQLiteCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        internal global::System.Data.SQLite.SQLiteTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        protected global::System.Data.SQLite.SQLiteCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SQLite.SQLiteDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "records";
+            tableMapping.ColumnMappings.Add("recordId", "recordId");
+            tableMapping.ColumnMappings.Add("category", "category");
+            tableMapping.ColumnMappings.Add("book", "book");
+            tableMapping.ColumnMappings.Add("income", "income");
+            tableMapping.ColumnMappings.Add("thesum", "thesum");
+            tableMapping.ColumnMappings.Add("added", "added");
+            tableMapping.ColumnMappings.Add("comment", "comment");
+            tableMapping.ColumnMappings.Add("title", "title");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SQLite.SQLiteConnection();
+            this._connection.ConnectionString = global::HomeAccounting.Properties.Settings.Default.AccountingConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SQLite.SQLiteCommand[1];
+            this._commandCollection[0] = new global::System.Data.SQLite.SQLiteCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = @"SELECT  records.recordId, records.category, records.book, records.income, records.thesum, records.added, records.comment, category.title
+FROM     records INNER JOIN
+               category ON category.categoryId = records.category
+WHERE  (records.book = @book)";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            global::System.Data.SQLite.SQLiteParameter param = new global::System.Data.SQLite.SQLiteParameter();
+            param.ParameterName = "@book";
+            param.DbType = global::System.Data.DbType.Int64;
+            param.DbType = global::System.Data.DbType.Int64;
+            param.Size = 8;
+            param.SourceColumn = "book";
+            this._commandCollection[0].Parameters.Add(param);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(accountingDataSet.recordsDataTable dataTable, long book) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((long)(book));
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual accountingDataSet.recordsDataTable GetData(long book) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((long)(book));
+            accountingDataSet.recordsDataTable dataTable = new accountingDataSet.recordsDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }

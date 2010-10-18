@@ -30,7 +30,7 @@ namespace HomeAccounting
                     _isEditing = true;
                     tbTitle.Text = SelectedAccount.Instance.Title;
                     tbPassword.Text = SelectedAccount.Instance.Password;
-                    tbPasswordAgain.Text = string.Empty;
+                    tbPasswordAgain.Text = SelectedAccount.Instance.Password;
                     break;
                 case FormCreatingReason.NewItem:
                     _isEditing = false;

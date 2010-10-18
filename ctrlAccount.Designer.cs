@@ -34,6 +34,13 @@
             this.tlpRecords = new System.Windows.Forms.TableLayoutPanel();
             this.pnlRecords = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.rowIdColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.addedColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.incomeColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.expenseColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.categoryColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dummyColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.recordBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tsFilterSearch = new System.Windows.Forms.ToolStrip();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.cbPeriod = new System.Windows.Forms.ToolStripComboBox();
@@ -50,13 +57,9 @@
             this.tlpDetails = new System.Windows.Forms.TableLayoutPanel();
             this.lblRecordDetails = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.lblHideRecordDetails = new System.Windows.Forms.LinkLabel();
             this.tbComment = new System.Windows.Forms.TextBox();
@@ -83,6 +86,7 @@
             this.tlpRecords.SuspendLayout();
             this.pnlRecords.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.recordBindingSource)).BeginInit();
             this.tsFilterSearch.SuspendLayout();
             this.tsRecords.SuspendLayout();
             this.tlpDetails.SuspendLayout();
@@ -134,20 +138,87 @@
             this.pnlRecords.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlRecords.Location = new System.Drawing.Point(3, 3);
             this.pnlRecords.Name = "pnlRecords";
-            this.pnlRecords.Size = new System.Drawing.Size(570, 235);
+            this.pnlRecords.Size = new System.Drawing.Size(570, 279);
             this.pnlRecords.TabIndex = 0;
             // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.rowIdColumn,
+            this.addedColumn,
+            this.incomeColumn,
+            this.expenseColumn,
+            this.categoryColumn,
+            this.dummyColumn});
+            this.dataGridView1.DataSource = this.recordBindingSource;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 50);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(570, 185);
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.Size = new System.Drawing.Size(570, 229);
             this.dataGridView1.TabIndex = 2;
+            // 
+            // rowIdColumn
+            // 
+            this.rowIdColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.rowIdColumn.DataPropertyName = "rowId";
+            this.rowIdColumn.HeaderText = "№";
+            this.rowIdColumn.Name = "rowIdColumn";
+            this.rowIdColumn.ReadOnly = true;
+            this.rowIdColumn.Width = 48;
+            // 
+            // addedColumn
+            // 
+            this.addedColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.addedColumn.DataPropertyName = "added";
+            this.addedColumn.HeaderText = "Дата";
+            this.addedColumn.Name = "addedColumn";
+            this.addedColumn.ReadOnly = true;
+            this.addedColumn.Width = 62;
+            // 
+            // incomeColumn
+            // 
+            this.incomeColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.incomeColumn.DataPropertyName = "income";
+            this.incomeColumn.HeaderText = "Приход";
+            this.incomeColumn.Name = "incomeColumn";
+            this.incomeColumn.ReadOnly = true;
+            this.incomeColumn.Width = 75;
+            // 
+            // expenseColumn
+            // 
+            this.expenseColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.expenseColumn.DataPropertyName = "expense";
+            this.expenseColumn.HeaderText = "Расход";
+            this.expenseColumn.Name = "expenseColumn";
+            this.expenseColumn.ReadOnly = true;
+            this.expenseColumn.Width = 73;
+            // 
+            // categoryColumn
+            // 
+            this.categoryColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.categoryColumn.DataPropertyName = "category";
+            this.categoryColumn.HeaderText = "Категория";
+            this.categoryColumn.Name = "categoryColumn";
+            this.categoryColumn.ReadOnly = true;
+            this.categoryColumn.Width = 93;
+            // 
+            // dummyColumn
+            // 
+            this.dummyColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dummyColumn.HeaderText = "";
+            this.dummyColumn.Name = "dummyColumn";
+            this.dummyColumn.ReadOnly = true;
+            // 
+            // recordBindingSource
+            // 
+            this.recordBindingSource.DataMember = "Record";
+            this.recordBindingSource.DataSource = typeof(HomeAccounting.DataSources.RecordsDS);
             // 
             // tsFilterSearch
             // 
@@ -272,29 +343,23 @@
             this.tlpDetails.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlpDetails.Controls.Add(this.lblRecordDetails, 0, 0);
             this.tlpDetails.Controls.Add(this.label2, 0, 1);
-            this.tlpDetails.Controls.Add(this.label3, 0, 2);
-            this.tlpDetails.Controls.Add(this.label4, 0, 3);
-            this.tlpDetails.Controls.Add(this.label1, 0, 4);
-            this.tlpDetails.Controls.Add(this.label5, 0, 5);
+            this.tlpDetails.Controls.Add(this.label1, 0, 2);
+            this.tlpDetails.Controls.Add(this.label5, 0, 3);
             this.tlpDetails.Controls.Add(this.label6, 1, 1);
-            this.tlpDetails.Controls.Add(this.label7, 1, 2);
-            this.tlpDetails.Controls.Add(this.label8, 1, 3);
-            this.tlpDetails.Controls.Add(this.label9, 1, 4);
+            this.tlpDetails.Controls.Add(this.label9, 1, 2);
             this.tlpDetails.Controls.Add(this.lblHideRecordDetails, 1, 0);
-            this.tlpDetails.Controls.Add(this.tbComment, 1, 5);
+            this.tlpDetails.Controls.Add(this.tbComment, 1, 3);
             this.tlpDetails.DataBindings.Add(new System.Windows.Forms.Binding("Visible", global::HomeAccounting.Properties.Settings.Default, "ShowRecordDetails", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.tlpDetails.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpDetails.Location = new System.Drawing.Point(0, 244);
+            this.tlpDetails.Location = new System.Drawing.Point(0, 288);
             this.tlpDetails.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
             this.tlpDetails.Name = "tlpDetails";
-            this.tlpDetails.RowCount = 6;
+            this.tlpDetails.RowCount = 4;
             this.tlpDetails.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tlpDetails.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tlpDetails.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tlpDetails.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpDetails.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpDetails.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpDetails.Size = new System.Drawing.Size(573, 205);
+            this.tlpDetails.Size = new System.Drawing.Size(573, 161);
             this.tlpDetails.TabIndex = 1;
             this.tlpDetails.Visible = global::HomeAccounting.Properties.Settings.Default.ShowRecordDetails;
             // 
@@ -320,32 +385,10 @@
             this.label2.Text = "Дата";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(10, 51);
-            this.label3.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(30, 16);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Тип";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(10, 73);
-            this.label4.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(45, 16);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Сумма";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(10, 95);
+            this.label1.Location = new System.Drawing.Point(10, 51);
             this.label1.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(68, 16);
@@ -356,7 +399,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(10, 117);
+            this.label5.Location = new System.Drawing.Point(10, 73);
             this.label5.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(86, 16);
@@ -375,32 +418,10 @@
             this.label6.Text = "label6";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(111, 51);
-            this.label7.Margin = new System.Windows.Forms.Padding(3);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(42, 16);
-            this.label7.TabIndex = 7;
-            this.label7.Text = "label7";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(111, 73);
-            this.label8.Margin = new System.Windows.Forms.Padding(3);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(42, 16);
-            this.label8.TabIndex = 8;
-            this.label8.Text = "label8";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(111, 95);
+            this.label9.Location = new System.Drawing.Point(111, 51);
             this.label9.Margin = new System.Windows.Forms.Padding(3);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(42, 16);
@@ -424,7 +445,7 @@
             // tbComment
             // 
             this.tbComment.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tbComment.Location = new System.Drawing.Point(111, 117);
+            this.tbComment.Location = new System.Drawing.Point(111, 73);
             this.tbComment.Multiline = true;
             this.tbComment.Name = "tbComment";
             this.tbComment.ReadOnly = true;
@@ -647,6 +668,7 @@
             this.pnlRecords.ResumeLayout(false);
             this.pnlRecords.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.recordBindingSource)).EndInit();
             this.tsFilterSearch.ResumeLayout(false);
             this.tsFilterSearch.PerformLayout();
             this.tsRecords.ResumeLayout(false);
@@ -688,13 +710,9 @@
         private System.Windows.Forms.TableLayoutPanel tlpDetails;
         private System.Windows.Forms.Label lblRecordDetails;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.LinkLabel lblHideRecordDetails;
         private System.Windows.Forms.TextBox tbComment;
@@ -717,5 +735,12 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.ListBox lbBooks;
         private System.Windows.Forms.Label lblBooks;
+        private System.Windows.Forms.BindingSource recordBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rowIdColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn addedColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn incomeColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn expenseColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn categoryColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dummyColumn;
     }
 }

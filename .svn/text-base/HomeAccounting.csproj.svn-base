@@ -67,9 +67,11 @@
     <Compile Include="DataClasses\BookManager.cs" />
     <Compile Include="DataClasses\BooksListDataSetFiller.cs" />
     <Compile Include="DataClasses\CategoriesListDataSetFiller.cs" />
+    <Compile Include="DataClasses\CategoryManager.cs" />
     <Compile Include="DataClasses\LoginChecker.cs" />
     <Compile Include="DataClasses\SelectedAccount.cs" />
     <Compile Include="DataClasses\SelectedBook.cs" />
+    <Compile Include="DataClasses\Service.cs" />
     <Compile Include="DataSources\AccountsList.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -91,6 +93,12 @@
     </Compile>
     <Compile Include="frmAddEditBook.Designer.cs">
       <DependentUpon>frmAddEditBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddEditCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddEditCategory.Designer.cs">
+      <DependentUpon>frmAddEditCategory.cs</DependentUpon>
     </Compile>
     <Compile Include="frmCategoryManagement.cs">
       <SubType>Form</SubType>
@@ -123,6 +131,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmAddEditBook.resx">
       <DependentUpon>frmAddEditBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddEditCategory.resx">
+      <DependentUpon>frmAddEditCategory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCategoryManagement.resx">
       <DependentUpon>frmCategoryManagement.cs</DependentUpon>

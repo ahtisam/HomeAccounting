@@ -43,6 +43,7 @@ namespace HomeAccounting.DataClasses
                             _dsSource.Tables["Category"].Rows.Add(new object[] {
                                 null,
                                 rdr.GetInt32(0),
+                                rdr.GetString(1),
                                 type,
                                 rdr.GetString(2),
                                 income,

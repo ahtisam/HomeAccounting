@@ -134,7 +134,7 @@
             this.pnlRecords.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlRecords.Location = new System.Drawing.Point(3, 3);
             this.pnlRecords.Name = "pnlRecords";
-            this.pnlRecords.Size = new System.Drawing.Size(570, 253);
+            this.pnlRecords.Size = new System.Drawing.Size(570, 235);
             this.pnlRecords.TabIndex = 0;
             // 
             // dataGridView1
@@ -146,7 +146,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(0, 50);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(570, 203);
+            this.dataGridView1.Size = new System.Drawing.Size(570, 185);
             this.dataGridView1.TabIndex = 2;
             // 
             // tsFilterSearch
@@ -171,7 +171,7 @@
             // toolStripLabel1
             // 
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(45, 22);
+            this.toolStripLabel1.Size = new System.Drawing.Size(51, 22);
             this.toolStripLabel1.Text = "Период";
             // 
             // cbPeriod
@@ -188,7 +188,7 @@
             // lblPeriod
             // 
             this.lblPeriod.Name = "lblPeriod";
-            this.lblPeriod.Size = new System.Drawing.Size(123, 22);
+            this.lblPeriod.Size = new System.Drawing.Size(141, 22);
             this.lblPeriod.Text = "01.01.2010-01.05.2010";
             this.lblPeriod.Visible = false;
             // 
@@ -200,7 +200,7 @@
             // lblSearch
             // 
             this.lblSearch.Name = "lblSearch";
-            this.lblSearch.Size = new System.Drawing.Size(37, 22);
+            this.lblSearch.Size = new System.Drawing.Size(42, 22);
             this.lblSearch.Text = "Поиск";
             // 
             // tbSearch
@@ -231,7 +231,7 @@
             this.btnAddRecord.Image = ((System.Drawing.Image)(resources.GetObject("btnAddRecord.Image")));
             this.btnAddRecord.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnAddRecord.Name = "btnAddRecord";
-            this.btnAddRecord.Size = new System.Drawing.Size(77, 22);
+            this.btnAddRecord.Size = new System.Drawing.Size(85, 22);
             this.btnAddRecord.Text = "Добавить";
             // 
             // btnEditRecord
@@ -239,7 +239,7 @@
             this.btnEditRecord.Image = ((System.Drawing.Image)(resources.GetObject("btnEditRecord.Image")));
             this.btnEditRecord.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnEditRecord.Name = "btnEditRecord";
-            this.btnEditRecord.Size = new System.Drawing.Size(120, 22);
+            this.btnEditRecord.Size = new System.Drawing.Size(131, 22);
             this.btnEditRecord.Text = "Отредактировать";
             // 
             // btnDeleteRecord
@@ -247,7 +247,7 @@
             this.btnDeleteRecord.Image = ((System.Drawing.Image)(resources.GetObject("btnDeleteRecord.Image")));
             this.btnDeleteRecord.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnDeleteRecord.Name = "btnDeleteRecord";
-            this.btnDeleteRecord.Size = new System.Drawing.Size(71, 22);
+            this.btnDeleteRecord.Size = new System.Drawing.Size(76, 22);
             this.btnDeleteRecord.Text = "Удалить";
             // 
             // toolStripSeparator2
@@ -260,7 +260,7 @@
             this.btnReports.Image = ((System.Drawing.Image)(resources.GetObject("btnReports.Image")));
             this.btnReports.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnReports.Name = "btnReports";
-            this.btnReports.Size = new System.Drawing.Size(76, 22);
+            this.btnReports.Size = new System.Drawing.Size(81, 22);
             this.btnReports.Text = "Отчеты";
             // 
             // tlpDetails
@@ -284,7 +284,7 @@
             this.tlpDetails.Controls.Add(this.tbComment, 1, 5);
             this.tlpDetails.DataBindings.Add(new System.Windows.Forms.Binding("Visible", global::HomeAccounting.Properties.Settings.Default, "ShowRecordDetails", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.tlpDetails.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpDetails.Location = new System.Drawing.Point(0, 262);
+            this.tlpDetails.Location = new System.Drawing.Point(0, 244);
             this.tlpDetails.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
             this.tlpDetails.Name = "tlpDetails";
             this.tlpDetails.RowCount = 6;
@@ -294,7 +294,7 @@
             this.tlpDetails.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tlpDetails.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tlpDetails.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpDetails.Size = new System.Drawing.Size(573, 190);
+            this.tlpDetails.Size = new System.Drawing.Size(573, 205);
             this.tlpDetails.TabIndex = 1;
             this.tlpDetails.Visible = global::HomeAccounting.Properties.Settings.Default.ShowRecordDetails;
             // 
@@ -305,17 +305,17 @@
             this.lblRecordDetails.Location = new System.Drawing.Point(0, 0);
             this.lblRecordDetails.Margin = new System.Windows.Forms.Padding(0, 0, 3, 10);
             this.lblRecordDetails.Name = "lblRecordDetails";
-            this.lblRecordDetails.Size = new System.Drawing.Size(92, 13);
+            this.lblRecordDetails.Size = new System.Drawing.Size(105, 16);
             this.lblRecordDetails.TabIndex = 0;
             this.lblRecordDetails.Text = "Детали записи";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(10, 26);
+            this.label2.Location = new System.Drawing.Point(10, 29);
             this.label2.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(33, 13);
+            this.label2.Size = new System.Drawing.Size(37, 16);
             this.label2.TabIndex = 1;
             this.label2.Text = "Дата";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -323,10 +323,10 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(10, 45);
+            this.label3.Location = new System.Drawing.Point(10, 51);
             this.label3.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(25, 13);
+            this.label3.Size = new System.Drawing.Size(30, 16);
             this.label3.TabIndex = 2;
             this.label3.Text = "Тип";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -334,10 +334,10 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(10, 64);
+            this.label4.Location = new System.Drawing.Point(10, 73);
             this.label4.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(38, 13);
+            this.label4.Size = new System.Drawing.Size(45, 16);
             this.label4.TabIndex = 3;
             this.label4.Text = "Сумма";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -345,10 +345,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(10, 83);
+            this.label1.Location = new System.Drawing.Point(10, 95);
             this.label1.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 13);
+            this.label1.Size = new System.Drawing.Size(68, 16);
             this.label1.TabIndex = 4;
             this.label1.Text = "Категория";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -356,10 +356,10 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(10, 102);
+            this.label5.Location = new System.Drawing.Point(10, 117);
             this.label5.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(74, 13);
+            this.label5.Size = new System.Drawing.Size(86, 16);
             this.label5.TabIndex = 5;
             this.label5.Text = "Комментарий";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -367,10 +367,10 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(98, 26);
+            this.label6.Location = new System.Drawing.Point(111, 29);
             this.label6.Margin = new System.Windows.Forms.Padding(3);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(35, 13);
+            this.label6.Size = new System.Drawing.Size(42, 16);
             this.label6.TabIndex = 6;
             this.label6.Text = "label6";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -378,10 +378,10 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(98, 45);
+            this.label7.Location = new System.Drawing.Point(111, 51);
             this.label7.Margin = new System.Windows.Forms.Padding(3);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(35, 13);
+            this.label7.Size = new System.Drawing.Size(42, 16);
             this.label7.TabIndex = 7;
             this.label7.Text = "label7";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -389,10 +389,10 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(98, 64);
+            this.label8.Location = new System.Drawing.Point(111, 73);
             this.label8.Margin = new System.Windows.Forms.Padding(3);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(35, 13);
+            this.label8.Size = new System.Drawing.Size(42, 16);
             this.label8.TabIndex = 8;
             this.label8.Text = "label8";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -400,10 +400,10 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(98, 83);
+            this.label9.Location = new System.Drawing.Point(111, 95);
             this.label9.Margin = new System.Windows.Forms.Padding(3);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(35, 13);
+            this.label9.Size = new System.Drawing.Size(42, 16);
             this.label9.TabIndex = 9;
             this.label9.Text = "label9";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -412,9 +412,9 @@
             // 
             this.lblHideRecordDetails.AutoSize = true;
             this.lblHideRecordDetails.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblHideRecordDetails.Location = new System.Drawing.Point(98, 0);
+            this.lblHideRecordDetails.Location = new System.Drawing.Point(111, 0);
             this.lblHideRecordDetails.Name = "lblHideRecordDetails";
-            this.lblHideRecordDetails.Size = new System.Drawing.Size(472, 23);
+            this.lblHideRecordDetails.Size = new System.Drawing.Size(459, 26);
             this.lblHideRecordDetails.TabIndex = 11;
             this.lblHideRecordDetails.TabStop = true;
             this.lblHideRecordDetails.Text = "Скрыть";
@@ -424,11 +424,11 @@
             // tbComment
             // 
             this.tbComment.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tbComment.Location = new System.Drawing.Point(98, 102);
+            this.tbComment.Location = new System.Drawing.Point(111, 117);
             this.tbComment.Multiline = true;
             this.tbComment.Name = "tbComment";
             this.tbComment.ReadOnly = true;
-            this.tbComment.Size = new System.Drawing.Size(472, 85);
+            this.tbComment.Size = new System.Drawing.Size(459, 85);
             this.tbComment.TabIndex = 12;
             // 
             // flowLayoutPanel1
@@ -441,10 +441,10 @@
             this.flowLayoutPanel1.Controls.Add(this.lblExpenseValue);
             this.flowLayoutPanel1.Controls.Add(this.lblBalance);
             this.flowLayoutPanel1.Controls.Add(this.lblBalanceValue);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 458);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 455);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(260, 13);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(295, 16);
             this.flowLayoutPanel1.TabIndex = 2;
             // 
             // lblIncome
@@ -453,57 +453,57 @@
             this.lblIncome.Location = new System.Drawing.Point(0, 0);
             this.lblIncome.Margin = new System.Windows.Forms.Padding(0);
             this.lblIncome.Name = "lblIncome";
-            this.lblIncome.Size = new System.Drawing.Size(79, 13);
+            this.lblIncome.Size = new System.Drawing.Size(90, 16);
             this.lblIncome.TabIndex = 0;
             this.lblIncome.Text = "Всего приход:";
             // 
             // lblIncomeValue
             // 
             this.lblIncomeValue.AutoSize = true;
-            this.lblIncomeValue.Location = new System.Drawing.Point(79, 0);
+            this.lblIncomeValue.Location = new System.Drawing.Point(90, 0);
             this.lblIncomeValue.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
             this.lblIncomeValue.Name = "lblIncomeValue";
-            this.lblIncomeValue.Size = new System.Drawing.Size(13, 13);
+            this.lblIncomeValue.Size = new System.Drawing.Size(15, 16);
             this.lblIncomeValue.TabIndex = 1;
             this.lblIncomeValue.Text = "0";
             // 
             // lblExpense
             // 
             this.lblExpense.AutoSize = true;
-            this.lblExpense.Location = new System.Drawing.Point(98, 0);
+            this.lblExpense.Location = new System.Drawing.Point(111, 0);
             this.lblExpense.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.lblExpense.Name = "lblExpense";
-            this.lblExpense.Size = new System.Drawing.Size(78, 13);
+            this.lblExpense.Size = new System.Drawing.Size(89, 16);
             this.lblExpense.TabIndex = 2;
             this.lblExpense.Text = "Всего расход:";
             // 
             // lblExpenseValue
             // 
             this.lblExpenseValue.AutoSize = true;
-            this.lblExpenseValue.Location = new System.Drawing.Point(176, 0);
+            this.lblExpenseValue.Location = new System.Drawing.Point(200, 0);
             this.lblExpenseValue.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
             this.lblExpenseValue.Name = "lblExpenseValue";
-            this.lblExpenseValue.Size = new System.Drawing.Size(13, 13);
+            this.lblExpenseValue.Size = new System.Drawing.Size(15, 16);
             this.lblExpenseValue.TabIndex = 3;
             this.lblExpenseValue.Text = "0";
             // 
             // lblBalance
             // 
             this.lblBalance.AutoSize = true;
-            this.lblBalance.Location = new System.Drawing.Point(195, 0);
+            this.lblBalance.Location = new System.Drawing.Point(221, 0);
             this.lblBalance.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.lblBalance.Name = "lblBalance";
-            this.lblBalance.Size = new System.Drawing.Size(49, 13);
+            this.lblBalance.Size = new System.Drawing.Size(56, 16);
             this.lblBalance.TabIndex = 4;
             this.lblBalance.Text = "Сальдо:";
             // 
             // lblBalanceValue
             // 
             this.lblBalanceValue.AutoSize = true;
-            this.lblBalanceValue.Location = new System.Drawing.Point(244, 0);
+            this.lblBalanceValue.Location = new System.Drawing.Point(277, 0);
             this.lblBalanceValue.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
             this.lblBalanceValue.Name = "lblBalanceValue";
-            this.lblBalanceValue.Size = new System.Drawing.Size(13, 13);
+            this.lblBalanceValue.Size = new System.Drawing.Size(15, 16);
             this.lblBalanceValue.TabIndex = 5;
             this.lblBalanceValue.Text = "0";
             // 
@@ -542,11 +542,11 @@
             this.lbBooks.FormattingEnabled = true;
             this.lbBooks.HorizontalScrollbar = true;
             this.lbBooks.IntegralHeight = false;
-            this.lbBooks.ItemHeight = 14;
-            this.lbBooks.Location = new System.Drawing.Point(0, 19);
+            this.lbBooks.ItemHeight = 16;
+            this.lbBooks.Location = new System.Drawing.Point(0, 22);
             this.lbBooks.Margin = new System.Windows.Forms.Padding(0);
             this.lbBooks.Name = "lbBooks";
-            this.lbBooks.Size = new System.Drawing.Size(240, 424);
+            this.lbBooks.Size = new System.Drawing.Size(240, 421);
             this.lbBooks.TabIndex = 5;
             this.lbBooks.ValueMember = "bookId";
             // 
@@ -562,7 +562,7 @@
             this.lblBooks.Location = new System.Drawing.Point(3, 3);
             this.lblBooks.Margin = new System.Windows.Forms.Padding(3);
             this.lblBooks.Name = "lblBooks";
-            this.lblBooks.Size = new System.Drawing.Size(70, 13);
+            this.lblBooks.Size = new System.Drawing.Size(78, 16);
             this.lblBooks.TabIndex = 1;
             this.lblBooks.Text = "Книги учета";
             // 
@@ -591,28 +591,28 @@
             this.toolStripDropDownButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton2.Image")));
             this.toolStripDropDownButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton2.Name = "toolStripDropDownButton2";
-            this.toolStripDropDownButton2.Size = new System.Drawing.Size(66, 22);
+            this.toolStripDropDownButton2.Size = new System.Drawing.Size(70, 22);
             this.toolStripDropDownButton2.Text = "Книги";
             this.toolStripDropDownButton2.ToolTipText = "Книги учета";
             // 
             // btnAddBook
             // 
             this.btnAddBook.Name = "btnAddBook";
-            this.btnAddBook.Size = new System.Drawing.Size(215, 22);
+            this.btnAddBook.Size = new System.Drawing.Size(235, 22);
             this.btnAddBook.Text = "Добавить новую";
             this.btnAddBook.Click += new System.EventHandler(this.btnAddBook_Click);
             // 
             // btnEditBook
             // 
             this.btnEditBook.Name = "btnEditBook";
-            this.btnEditBook.Size = new System.Drawing.Size(215, 22);
+            this.btnEditBook.Size = new System.Drawing.Size(235, 22);
             this.btnEditBook.Text = "Редактировать выбранную";
             this.btnEditBook.Click += new System.EventHandler(this.btnEditBook_Click);
             // 
             // btnDeleteBook
             // 
             this.btnDeleteBook.Name = "btnDeleteBook";
-            this.btnDeleteBook.Size = new System.Drawing.Size(215, 22);
+            this.btnDeleteBook.Size = new System.Drawing.Size(235, 22);
             this.btnDeleteBook.Text = "Удалить выбранную";
             this.btnDeleteBook.Click += new System.EventHandler(this.btnDeleteBook_Click);
             // 
@@ -626,14 +626,14 @@
             this.btnCategories.Image = ((System.Drawing.Image)(resources.GetObject("btnCategories.Image")));
             this.btnCategories.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnCategories.Name = "btnCategories";
-            this.btnCategories.Size = new System.Drawing.Size(81, 22);
+            this.btnCategories.Size = new System.Drawing.Size(88, 22);
             this.btnCategories.Text = "Категории";
             this.btnCategories.ToolTipText = "Категории записей";
             this.btnCategories.Click += new System.EventHandler(this.btnCategories_Click);
             // 
             // ctrlAccount
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.tableLayoutPanel1);
             this.DataBindings.Add(new System.Windows.Forms.Binding("Font", global::HomeAccounting.Properties.Settings.Default, "GeneralFont", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));

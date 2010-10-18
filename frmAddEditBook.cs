@@ -37,6 +37,7 @@ namespace HomeAccounting
                     case FormCreatingReason.EditItem:
                         tbTitle.Text = SelectedBook.Instance.Title;
                         cbBookType.SelectedValue = SelectedBook.Instance.Type;
+
                         Text = "Редактировать книгу учета";
                         _isEditing = true;
                         break;
@@ -71,6 +72,25 @@ namespace HomeAccounting
                 }
                 else
                 {
+                    if (cbBookType.SelectedValue.ToString() != SelectedBook.Instance.Type)
+                    {
+                        if (cbBookType.SelectedValue.ToString() == "i")
+                        {
+                            if (MessageBox.Show("Записи в книге типа \"Только приход\" не могут иметь записей в графе \"Расход\",\n" +
+                                "поэтому если таковые имеются, то они будут удалены.\n\nВы уверены, что хотите этого?", "Внимание", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)
+                            {
+                                return;
+                            }
+                        }
+                        if (cbBookType.SelectedValue.ToString() == "o")
+                        {
+                            if (MessageBox.Show("Записи в книге типа \"Только расход\" не могут иметь записей в графе \"Приход\",\n" +
+                                "поэтому если таковые имеются, то они будут удалены.\n\nВы уверены, что хотите этого?", "Внимание", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)
+                            {
+                                return;
+                            }
+                        }
+                    }
                     BookManager.EditBook(SelectedBook.Instance.BookId, tbTitle.Text, cbBookType.SelectedValue.ToString());
                     this.DialogResult = DialogResult.OK;
                 }

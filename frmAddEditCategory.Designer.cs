@@ -37,10 +37,10 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.tbTitle = new System.Windows.Forms.TextBox();
-            this.categoryTypeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bookTypeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.categoryTypeBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookTypeBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -66,27 +66,27 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(273, 150);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(273, 156);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // lblType
             // 
             this.lblType.AutoSize = true;
-            this.lblType.Location = new System.Drawing.Point(26, 61);
+            this.lblType.Location = new System.Drawing.Point(26, 63);
             this.lblType.Margin = new System.Windows.Forms.Padding(3, 11, 3, 0);
             this.lblType.Name = "lblType";
-            this.lblType.Size = new System.Drawing.Size(26, 13);
+            this.lblType.Size = new System.Drawing.Size(28, 15);
             this.lblType.TabIndex = 3;
             this.lblType.Text = "Тип";
             // 
             // cbCategoryType
             // 
-            this.cbCategoryType.DataSource = this.categoryTypeBindingSource;
+            this.cbCategoryType.DataSource = this.bookTypeBindingSource;
             this.cbCategoryType.DisplayMember = "Value";
             this.cbCategoryType.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cbCategoryType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCategoryType.FormattingEnabled = true;
-            this.cbCategoryType.Location = new System.Drawing.Point(26, 77);
+            this.cbCategoryType.Location = new System.Drawing.Point(26, 81);
             this.cbCategoryType.Margin = new System.Windows.Forms.Padding(3, 3, 3, 11);
             this.cbCategoryType.Name = "cbCategoryType";
             this.cbCategoryType.Size = new System.Drawing.Size(221, 21);
@@ -98,7 +98,7 @@
             this.lblCategory.AutoSize = true;
             this.lblCategory.Location = new System.Drawing.Point(26, 11);
             this.lblCategory.Name = "lblCategory";
-            this.lblCategory.Size = new System.Drawing.Size(138, 13);
+            this.lblCategory.Size = new System.Drawing.Size(158, 15);
             this.lblCategory.TabIndex = 1;
             this.lblCategory.Text = "Наименование категории";
             // 
@@ -113,12 +113,12 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 23F));
             this.tableLayoutPanel2.Controls.Add(this.btnSave, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnCancel, 1, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(23, 112);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(23, 116);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(150, 35);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(167, 37);
             this.tableLayoutPanel2.TabIndex = 5;
             // 
             // btnSave
@@ -129,20 +129,21 @@
             this.btnSave.Location = new System.Drawing.Point(3, 3);
             this.btnSave.Name = "btnSave";
             this.btnSave.Padding = new System.Windows.Forms.Padding(3);
-            this.btnSave.Size = new System.Drawing.Size(76, 29);
+            this.btnSave.Size = new System.Drawing.Size(86, 31);
             this.btnSave.TabIndex = 6;
             this.btnSave.Text = "Сохранить";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnCancel
             // 
             this.btnCancel.AutoSize = true;
             this.btnCancel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.Location = new System.Drawing.Point(85, 3);
+            this.btnCancel.Location = new System.Drawing.Point(95, 3);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Padding = new System.Windows.Forms.Padding(3);
-            this.btnCancel.Size = new System.Drawing.Size(62, 29);
+            this.btnCancel.Size = new System.Drawing.Size(69, 31);
             this.btnCancel.TabIndex = 7;
             this.btnCancel.Text = "Отмена";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -150,14 +151,15 @@
             // tbTitle
             // 
             this.tbTitle.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tbTitle.Location = new System.Drawing.Point(26, 27);
+            this.tbTitle.Location = new System.Drawing.Point(26, 29);
             this.tbTitle.Name = "tbTitle";
             this.tbTitle.Size = new System.Drawing.Size(221, 20);
             this.tbTitle.TabIndex = 2;
+            this.tbTitle.TextChanged += new System.EventHandler(this.tbTitle_TextChanged);
             // 
-            // categoryTypeBindingSource
+            // bookTypeBindingSource
             // 
-            this.categoryTypeBindingSource.DataSource = typeof(HomeAccounting.DataSources.CategoryType);
+            this.bookTypeBindingSource.DataSource = typeof(HomeAccounting.DataSources.BookType);
             // 
             // frmAddEditCategory
             // 
@@ -169,12 +171,13 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmAddEditCategory";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmAddEditCategory";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.categoryTypeBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookTypeBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -190,6 +193,6 @@
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.TextBox tbTitle;
-        private System.Windows.Forms.BindingSource categoryTypeBindingSource;
+        private System.Windows.Forms.BindingSource bookTypeBindingSource;
     }
 }

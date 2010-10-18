@@ -37,13 +37,13 @@
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.btnClose = new System.Windows.Forms.ToolStripButton();
             this.dgCategories = new System.Windows.Forms.DataGridView();
+            this.dummyColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rowIdColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.typeColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.titleColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.incomeColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.expenseColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.totalColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dummyColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.categoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tsRecords.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgCategories)).BeginInit();
@@ -73,7 +73,7 @@
             this.btnAddRecord.Image = ((System.Drawing.Image)(resources.GetObject("btnAddRecord.Image")));
             this.btnAddRecord.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnAddRecord.Name = "btnAddRecord";
-            this.btnAddRecord.Size = new System.Drawing.Size(77, 22);
+            this.btnAddRecord.Size = new System.Drawing.Size(85, 22);
             this.btnAddRecord.Text = "Добавить";
             this.btnAddRecord.Click += new System.EventHandler(this.btnAddRecord_Click);
             // 
@@ -82,16 +82,18 @@
             this.btnEditRecord.Image = ((System.Drawing.Image)(resources.GetObject("btnEditRecord.Image")));
             this.btnEditRecord.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnEditRecord.Name = "btnEditRecord";
-            this.btnEditRecord.Size = new System.Drawing.Size(120, 22);
+            this.btnEditRecord.Size = new System.Drawing.Size(131, 22);
             this.btnEditRecord.Text = "Отредактировать";
+            this.btnEditRecord.Click += new System.EventHandler(this.btnEditRecord_Click);
             // 
             // btnDeleteRecord
             // 
             this.btnDeleteRecord.Image = ((System.Drawing.Image)(resources.GetObject("btnDeleteRecord.Image")));
             this.btnDeleteRecord.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnDeleteRecord.Name = "btnDeleteRecord";
-            this.btnDeleteRecord.Size = new System.Drawing.Size(71, 22);
+            this.btnDeleteRecord.Size = new System.Drawing.Size(76, 22);
             this.btnDeleteRecord.Text = "Удалить";
+            this.btnDeleteRecord.Click += new System.EventHandler(this.btnDeleteRecord_Click);
             // 
             // toolStripSeparator2
             // 
@@ -103,7 +105,7 @@
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
             this.btnClose.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(71, 22);
+            this.btnClose.Size = new System.Drawing.Size(77, 22);
             this.btnClose.Text = "Закрыть";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
@@ -136,6 +138,13 @@
             this.dgCategories.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dgCategories_RowPostPaint);
             this.dgCategories.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dgCategories_CellPainting);
             // 
+            // dummyColumn
+            // 
+            this.dummyColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dummyColumn.HeaderText = "";
+            this.dummyColumn.Name = "dummyColumn";
+            this.dummyColumn.ReadOnly = true;
+            // 
             // rowIdColumn
             // 
             this.rowIdColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
@@ -143,7 +152,7 @@
             this.rowIdColumn.HeaderText = "№";
             this.rowIdColumn.Name = "rowIdColumn";
             this.rowIdColumn.ReadOnly = true;
-            this.rowIdColumn.Width = 45;
+            this.rowIdColumn.Width = 48;
             // 
             // typeColumn
             // 
@@ -152,7 +161,7 @@
             this.typeColumn.HeaderText = "Тип";
             this.typeColumn.Name = "typeColumn";
             this.typeColumn.ReadOnly = true;
-            this.typeColumn.Width = 50;
+            this.typeColumn.Width = 55;
             // 
             // titleColumn
             // 
@@ -161,7 +170,7 @@
             this.titleColumn.HeaderText = "Наименование";
             this.titleColumn.Name = "titleColumn";
             this.titleColumn.ReadOnly = true;
-            this.titleColumn.Width = 105;
+            this.titleColumn.Width = 119;
             // 
             // incomeColumn
             // 
@@ -170,7 +179,7 @@
             this.incomeColumn.HeaderText = "Приход";
             this.incomeColumn.Name = "incomeColumn";
             this.incomeColumn.ReadOnly = true;
-            this.incomeColumn.Width = 70;
+            this.incomeColumn.Width = 75;
             // 
             // expenseColumn
             // 
@@ -179,7 +188,7 @@
             this.expenseColumn.HeaderText = "Расход";
             this.expenseColumn.Name = "expenseColumn";
             this.expenseColumn.ReadOnly = true;
-            this.expenseColumn.Width = 68;
+            this.expenseColumn.Width = 73;
             // 
             // totalColumn
             // 
@@ -188,23 +197,17 @@
             this.totalColumn.HeaderText = "Сальдо";
             this.totalColumn.Name = "totalColumn";
             this.totalColumn.ReadOnly = true;
-            this.totalColumn.Width = 70;
-            // 
-            // dummyColumn
-            // 
-            this.dummyColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dummyColumn.HeaderText = "";
-            this.dummyColumn.Name = "dummyColumn";
-            this.dummyColumn.ReadOnly = true;
+            this.totalColumn.Width = 76;
             // 
             // categoryBindingSource
             // 
             this.categoryBindingSource.DataMember = "Category";
             this.categoryBindingSource.DataSource = typeof(HomeAccounting.DataSources.CategoriesListDS);
+            this.categoryBindingSource.CurrentChanged += new System.EventHandler(this.categoryBindingSource_CurrentChanged);
             // 
             // frmCategoryManagement
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(653, 469);
             this.Controls.Add(this.dgCategories);

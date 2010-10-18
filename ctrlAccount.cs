@@ -45,6 +45,10 @@ namespace HomeAccounting
                                 MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        private void GetRecords()
+        {
+
+        }
         public ctrlAccount()
         {
             InitializeComponent();

@@ -82,7 +82,6 @@
     <Compile Include="DataSources\CategoriesList.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="DataSources\CategoryType.cs" />
     <Compile Include="frmAddEditAccount.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -173,7 +172,6 @@
     <None Include="Properties\DataSources\HomeAccounting.DataSources.BooksListDS.datasource" />
     <None Include="Properties\DataSources\HomeAccounting.DataSources.BookType.datasource" />
     <None Include="Properties\DataSources\HomeAccounting.DataSources.CategoriesListDS.datasource" />
-    <None Include="Properties\DataSources\HomeAccounting.DataSources.CategoryType.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

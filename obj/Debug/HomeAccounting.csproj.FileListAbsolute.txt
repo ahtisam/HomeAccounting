@@ -29,3 +29,4 @@ D:\Development\cSharp\HomeAccounting\obj\Debug\HomeAccounting.frmAddEditBook.res
 D:\Development\cSharp\HomeAccounting\obj\Debug\HomeAccounting.frmCategoryManagement.resources
 F:\Coding\HomeAccounting\obj\Debug\HomeAccounting.frmCategoryManagement.resources
 F:\Coding\HomeAccounting\obj\Debug\HomeAccounting.frmAddEditCategory.resources
+D:\Development\cSharp\HomeAccounting\obj\Debug\HomeAccounting.frmAddEditCategory.resources

@@ -61,7 +61,7 @@ namespace HomeAccounting
                 MessageBox.Show(ex.Message + "\n\n" + ex.StackTrace, "Ooops!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        private void ShowAccountForm(AccountFormCreatingReason reason)
+        private void ShowAccountForm(FormCreatingReason reason)
         {
             frmAddEditAccount f = new frmAddEditAccount(reason);
             if (f.ShowDialog() == DialogResult.OK)
@@ -114,12 +114,12 @@ namespace HomeAccounting
 
         private void miEditAccount_Click(object sender, EventArgs e)
         {
-            ShowAccountForm(AccountFormCreatingReason.EditAccount);
+            ShowAccountForm(FormCreatingReason.EditItem);
         }
 
         private void miNewAccount_Click(object sender, EventArgs e)
         {
-            ShowAccountForm(AccountFormCreatingReason.NewAccount);
+            ShowAccountForm(FormCreatingReason.NewItem);
         }
 
         private void miDeleteAccount_Click(object sender, EventArgs e)
